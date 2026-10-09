@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eeg-vr-clean"
+version = "1.0.0"
+description = "Artefact handling for EEG recorded during VR reaching: band-limited EOG regression, robust CAR, bridge handling, rule-based motion masks, masked band-power features"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "mne>=1.6", "matplotlib>=3.7", "h5py>=3.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+eeg-vr-clean = "eeg_vr_clean.cli:main"
+
+[tool.setuptools]
+packages = ["eeg_vr_clean"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

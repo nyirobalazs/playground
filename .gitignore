@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+# never commit recordings or outputs derived from them
+*.hdf5
+*.h5
+*.fif
+*.npz
+out/
+outputs/
+data/
